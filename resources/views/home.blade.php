@@ -1,27 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app');
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('titolo','Movies')
 
-    <title>Movie</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
-    @include('partials.header')  {{-- faccio cosi xk voglio che header sia sempre lo stesso in ogni pagina, lo stesso vale x footer --}}
-    <main>
-        @yield('content')
-    </main>
-    @include('partials.footer')
-
-</body>
-
-</html>
+@section('content')
+<h1>Film</h1>
+    @forelse ($movies as $key=>$Movie )
+        <p>{{$movies->title}}</p>
+    @empty
+        <p>No film</p>
+    @endforelse
+@endforelse
