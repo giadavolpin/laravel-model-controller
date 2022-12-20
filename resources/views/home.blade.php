@@ -1,13 +1,11 @@
 @extends('layouts.app');
 
-@section('title')
-		<section class="container">
-  			  <ul>
-   			     @foreach
-                 {{route('film')}}
-                {{--  ($movies as $movie)
-       			     	<li>{{$movie->title}}</li> --}}
-        		 @endforeach
-   			 </ul>
-		</section>
-	@endsection
+@section('content')
+	<section class="container">
+		<ul>
+			@foreach ($movies as $movie)
+				<li>{{$movie->title}}{{$movie->date}}</li> 
+			@endforeach
+		</ul>
+	</section>
+@endsection
