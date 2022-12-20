@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'index']);
-Route::get('/film', [PageController::class, 'getfilm']);
+Route::get('/', [PageController::class, 'index'])->name('home');
+Route::get('/film', [PageController::class, 'getfilm'])->name('film');
 
 
 // Route::get('/percorsoURL', function () {
