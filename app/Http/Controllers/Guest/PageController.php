@@ -10,13 +10,17 @@ class PageController extends Controller
 {
     public function index()
     {
-        /*      $books = ['autore' => 'autore 1'];
-        return view('home', compact('books'));
-        */
-
+        return view('home');
+    }
+    public function getfilm()
+    {
         $movies = Movie::all();
         return view('home', compact('movies'));
-
-
     }
+
+/*      $books = ['autore' => 'autore 1'];
+return view('home', compact('books'));
+*/
+
+
 }

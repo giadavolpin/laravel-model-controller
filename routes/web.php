@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, 'index']);
+Route::get('/film', [PageController::class, 'getfilm']);
 
 
 // Route::get('/percorsoURL', function () {
