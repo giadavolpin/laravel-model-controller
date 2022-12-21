@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-@extends('layout.app')
-	@section('content')
-		<h1> prova
-	@endsection
-=======
 @extends('layouts.app');
 
 @section('content')
@@ -25,4 +19,3 @@
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div> --}}
->>>>>>> e7fb1cd381c749f4cd1813226d3cc843b99f0b4b
