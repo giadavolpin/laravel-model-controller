@@ -14,8 +14,10 @@ use App\Http\Controllers\Guest\PageController;
 |
 */
 
-Route::get('/', [PageController::class, 'index'])->name('home');
+/* Route::get('/', [PageController::class, 'index'])->name('home');
 Route::get('/film', [PageController::class, 'getfilm'])->name('film');
+*/
+Route::resource('comics', PageController::class);
 
 
 // Route::get('/percorsoURL', function () {
