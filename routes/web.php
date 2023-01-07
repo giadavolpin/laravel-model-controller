@@ -17,6 +17,13 @@ use App\Http\Controllers\Guest\PageController;
 /* Route::get('/', [PageController::class, 'index'])->name('home');
 Route::get('/film', [PageController::class, 'getfilm'])->name('film');
 */
+Route::get(
+    '/',
+    function () {
+        return view('home');
+    }
+)->name('home');
+
 Route::resource('comics', PageController::class);
 
 
